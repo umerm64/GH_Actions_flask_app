@@ -16,6 +16,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Echo commit hash
+      run: echo ${{ github.sha }}
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag umer_flask_img1:$(date +%s)
 
