@@ -20,7 +20,7 @@ jobs:
   build_img_job2:
 
     runs-on: ubuntu-latest
-
+    needs: build_img_job1
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
