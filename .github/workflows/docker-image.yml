@@ -8,11 +8,20 @@ on:
 
 jobs:
 
-  build:
+  build_img_job1:
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag umer_flask_img:$(date +%s)
+      run: docker build . --file Dockerfile --tag umer_flask_img1:$(date +%s)
+
+  build_img_job2:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag umer_flask_img2:$(date +%s)
