@@ -47,4 +47,4 @@ jobs:
           password: ${{ secrets.docker_password }}
       -
         name: Pull and run updated docker image
-        run: docker run -p 5000:5000 umerarshad123/app_gh:v1
+        run: docker run -d -p 5000:5000 umerarshad123/app_gh:v1
