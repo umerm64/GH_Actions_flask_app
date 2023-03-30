@@ -48,7 +48,3 @@ jobs:
       -
         name: Pull and run updated docker image
         run: docker run -p 5000:5000 umerarshad123/app_gh:v1
-        uses: docker/build-push-action@v4
-        with:
-          push: true
-          tags: umerarshad123/app_gh:v1
